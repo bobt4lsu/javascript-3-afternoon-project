@@ -54,7 +54,7 @@ var employees = [
 function employeeUpdater() {
   for (let i = 0; i < employees.length; i++){
     if (employees[i].firstName === "Theo"){
-      // console.log(employees[i]);
+
       delete employees[i]
     } else if(employees[i].firstName === "Lorie"){
       employees[i].department = "HR"
@@ -80,22 +80,21 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
-function removeDuplicates() {
-  for(let i = 0; i < workplaceAccidents.length; i++){
-    for(let j=1;j<workplaceAccidents.length - 1;j++){
-      if(workplaceAccidents[i] === workplaceAccidents[j]){
-        console.log(workplaceAccidents[i])
-        workplaceAccidents.pop(workplaceAccidents[i])
+
+function removeDuplicates(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] === arr[j]) {
+        arr.splice(j, 1);
+        i--;
       }
     }
   }
-  return workplaceAccidents;
+  return arr;
+}
 
-  var set2 = new Set(workplaceAccidents)
+console.log(removeDuplicates(workplaceAccidents))
 
-  return [...set2]
-
-  }
 
 
 ////////// PROBLEM 3 //////////
@@ -189,17 +188,15 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
 function looper(){
   for (let index = 0; index < numsArr.length; index++) {
     for (let k = 0; k < numsArr[index].length; k++) {
-      if(numsArr[index][k] %2 === 0 ){numsArr[index][k]= "even" }
+      if(numsArr[index][k] %2 === 0 ){numsArr[index][k] = "even" }
       else{numsArr[index][k]= "odd"}
     }
-
-
-
   }
   return(numsArr);
 }
+
+  
 

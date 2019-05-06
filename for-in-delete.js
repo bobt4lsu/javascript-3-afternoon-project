@@ -11,7 +11,7 @@
   In the example below, we are accessing the property values. Uncomment the code below, run it and look at what prints in the console.
 */
 
-var values = {
+let values = {
   one: 'These',
   two: ' are',
   three: ' the',
@@ -19,7 +19,7 @@ var values = {
   five: ' values.'
 } 
 
-for(var key in values) {
+for(let key in values) {
   console.log(values[key])
 }
 
@@ -27,7 +27,7 @@ for(var key in values) {
   In this next example, we are accessing the property names themselves. Uncomment the code below, run it and look at what prints in the console.
 */
 
-for(var key in values) {
+for(let key in values) {
   console.log(key)
 }
 
@@ -45,7 +45,7 @@ function showValues( obj ) {
   for (let key in obj) {
     answer += obj[key];
   }
-  return answer
+    return answer
 }
 
 
@@ -60,9 +60,9 @@ function showValues( obj ) {
 */
 
 function greaterThan10 ( obj ) {
-  for (var key in obj) {
+  for (let key in obj) {
     if (obj[key] > 10) {
-      obj[key]=0;
+      obj[key] = 0;
   }
 }
   return obj  
@@ -149,7 +149,7 @@ function removePassword(obj) {
 ////////// PROBLEM 6 //////////
 
 // Do not edit the code below.
-var deleteTheBigNumbers = {
+let deleteTheBigNumbers = {
   first: 10,
   second: 20,
   third: 110,

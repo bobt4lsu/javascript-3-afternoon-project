@@ -122,14 +122,14 @@ return Math.min(first, second, third)
 //Code Here
 function numberGroups( obj ) {
 
-  let {a, b, c} = obj
+  let {a, b, c} = obj;
  
  
  
-  let total = Math.max(a.length, b.length, c.length)
+  let total = Math.max(a.length, b.length, c.length);
  
  
-  if( total === a,length) return a 
+  if( total === a.length) return a
   if( total === b.length) return b
   if( total === c.length) return c
  
